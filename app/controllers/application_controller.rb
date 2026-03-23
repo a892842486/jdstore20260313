@@ -16,4 +16,13 @@ class ApplicationController < ActionController::Base
       cart
     end
   end
+
+  def admin_required
+    if !current_user.admin?
+      return if current_user&.admin?
+        redirect_to root_path, alert: "You are not authorized."
+      end
+    end
+
+  end
 end
