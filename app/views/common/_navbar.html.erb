@@ -2,8 +2,60 @@
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
     <a href="/" class="text-lg font-bold">Job Listing</a>
 
-    <div>
-      <%= link_to "登入", "#", class: "text-gray-700 hover:text-blue-500" %>
+    <div class="flex items-center space-x-4">
+      <% if !current_user %>
+        <%= link_to "註冊", new_user_registration_path,
+            class: "text-gray-700 hover:text-blue-500" %>
+
+        <%= link_to "登入", new_user_session_path,
+            class: "text-gray-700 hover:text-blue-500" %>
+
+      <% else %>
+        <div class="relative group">
+          <!-- 按鈕 -->
+          <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+            Hi, <%= current_user.email %>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-4 w-4 ml-2"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute right-0 mt-0 pt-2 w-48
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition duration-150 z-50">
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg">
+              <%= link_to "個人資料", edit_user_registration_path,
+                  class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+
+              <div class="border-t border-gray-100"></div>
+
+              <%= link_to destroy_user_session_path,
+                  data: { turbo_method: :delete },
+                  class: "flex items-center px-4 py-2 text-sm text-red-500 hover:bg-red-50" do %>
+
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       class="h-4 w-4 mr-2"
+                       fill="none"
+                       viewBox="0 0 24 24"
+                       stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M17 16l4-4m0 0l-4-4m4 4H7" />
+                  </svg>
+
+                登出
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </nav>
