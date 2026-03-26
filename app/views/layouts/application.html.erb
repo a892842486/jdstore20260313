@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Job Listing</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    
-    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+  <title>商品</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body class="bg-gray-100 text-gray-900">
-    <%= render "common/navbar" %>
+  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-    <div class="max-w-7xl mx-auto mt-6 px-4">
-      <%= render "common/flashes" %>
-      <%= yield %>
-    </div>
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+  <%= render "common/navbar" %>
 
-    <%= render "common/footer" %>
-  </body>
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto mt-6 px-4">
+    <%= render "common/flashes" %>
+    <%= yield %>
+  </div>
+
+  <%= render "common/footer" %>
+</body>
 </html>

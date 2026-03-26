@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JDstore 後台</title>
+  <title>商品管理</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -9,13 +9,11 @@
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 </head>
-<body class="bg-gray-100 min-h-screen">
 
-  <!-- Navbar -->
+<body class="bg-gray-100 text-gray-900 min-h-screen">
   <%= render "common/navbar" %>
 
   <div class="flex max-w-7xl mx-auto mt-6 px-4">
-
     <!-- Sidebar -->
     <aside class="w-64 bg-white rounded-lg shadow p-4 mr-6">
       <nav class="space-y-2">
@@ -27,9 +25,9 @@
 
     <!-- Main Content -->
     <main class="flex-1 bg-white rounded-lg shadow p-6">
+    <%= render "common/flashes" %>
       <%= yield %>
     </main>
-
   </div>
 
   <%= render "common/footer" %>
