@@ -1,6 +1,14 @@
 <div class="container mx-auto px-4">
   <div class="w-full">
-    <h2 class="text-2xl font-semibold mb-4">購物車</h2>
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold">購物車</h2>
+
+      <%= link_to "清空購物車",
+          clean_carts_path,
+          method: :delete,
+          data: { confirm: "你確定要清空整個購物車嗎？" },
+          class: "text-sm text-red-500 hover:text-red-700 underline transition" %>
+    </div>
 
     <div class="overflow-x-auto">
       <table class="min-w-full border border-gray-300">
@@ -9,6 +17,7 @@
             <th colspan="2" class="px-4 py-2 text-left border-b border-gray-300">商品資訊</th>
             <th class="px-4 py-2 text-left border-b border-gray-300">單價</th>
             <th class="px-4 py-2 text-left border-b border-gray-300">數量</th>
+            <th class="px-4 py-2 border-b border-gray-300">操作</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +41,7 @@
                 <%= number_to_currency(cart_item.product.price, unit: "元", format: "%n%u", precision: 0) %>
               </td>
               <td class="px-4 py-2 border-b border-gray-300"><%= cart_item.quantity %></td>
+
             </tr>
           <% end %>
         </tbody>

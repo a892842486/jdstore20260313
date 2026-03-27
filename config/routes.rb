@@ -21,7 +21,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts, only: [:index]
+  resources :carts, only: [:index] do
+    collection do
+      delete :clean
+    end
+  end
 
   namespace :admin do
     resources :products
