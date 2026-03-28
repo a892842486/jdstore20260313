@@ -1,3 +1,10 @@
+<div class="flex justify-between items-center p-4">
+  <h1 class="text-2xl font-semibold">商品管理</h1>
+
+  <%= link_to "＋ 新增商品",
+      new_admin_product_path,
+      class: "px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition" %>
+</div>
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-4">
   <% @products.each do |product| %>
     <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
