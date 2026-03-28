@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :carts, only: [:index] do
     collection do
       delete :clean
+      post :checkout
     end
   end
 
@@ -34,5 +35,5 @@ Rails.application.routes.draw do
    resources :cart_items
 
 
-   
+
 end
