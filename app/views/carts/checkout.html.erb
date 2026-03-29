@@ -53,40 +53,26 @@
       <h3 class="text-lg font-medium mb-3">訂購人資訊</h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div>
-          <%= f.label :billing_name, "姓名", class: "block mb-1 text-sm text-gray-700" %>
-          <%= f.text_field :billing_name,
-                class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-300" %>
-        </div>
-
-        <div>
-          <%= f.label :billing_address, "地址", class: "block mb-1 text-sm text-gray-700" %>
-          <%= f.text_field :billing_address,
-                class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-300" %>
-        </div>
+        <%= form_field_with_error(f, :billing_name, "姓名") %>
+        <%= form_field_with_error(f, :billing_address, "地址") %>
       </div>
 
       <!-- 收貨人 -->
       <h3 class="text-lg font-medium mb-3">收貨人資訊</h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div>
-          <%= f.label :shipping_name, "姓名", class: "block mb-1 text-sm text-gray-700" %>
-          <%= f.text_field :shipping_name,
-                class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-300" %>
-        </div>
-
-        <div>
-          <%= f.label :shipping_address, "地址", class: "block mb-1 text-sm text-gray-700" %>
-          <%= f.text_field :shipping_address,
-                class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-300" %>
-        </div>
+        <%= form_field_with_error(f, :shipping_name, "姓名") %>
+        <%= form_field_with_error(f, :shipping_address, "地址") %>
       </div>
+
 
       <!-- 送出 -->
       <div class="flex justify-end">
         <%= f.submit "生成訂單",
-              class: "bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition" %>
+              class: "bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition",
+              data: {
+                disable_with: "送出中..."
+              } %>
       </div>
 
     <% end %>

@@ -1,0 +1,81 @@
+<div class="container mx-auto px-4">
+  <div class="w-full">
+
+    <!-- 標題 -->
+    <h2 class="text-2xl font-semibold mb-4">訂單明細</h2>
+
+    <!-- 商品快照 -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b border-gray-300">商品名稱</th>
+            <th class="px-4 py-2 text-left border-b border-gray-300">單價</th>
+            <th class="px-4 py-2 text-left border-b border-gray-300">數量</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @product_lists.each do |pl| %>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 border-b border-gray-300">
+                <%= pl.product_name %>
+              </td>
+
+              <td class="px-4 py-2 border-b border-gray-300">
+                <%= number_to_currency(pl.product_price, unit: "元", precision: 0, format: "%n%u") %>
+              </td>
+
+              <td class="px-4 py-2 border-b border-gray-300">
+                <%= pl.quantity %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 總價 -->
+    <div class="flex justify-end mt-4">
+      <span class="text-lg font-semibold text-gray-800">
+        總計 <%= number_to_currency(@order.total, unit: "元", precision: 0, format: "%n%u") %>
+      </span>
+    </div>
+
+    <hr class="my-6">
+
+    <!-- 寄送資訊 -->
+    <h2 class="text-2xl font-semibold mb-4">寄送資訊</h2>
+
+    <div class="border border-gray-300 rounded">
+      <table class="min-w-full">
+        <tbody>
+
+          <tr class="bg-gray-100">
+            <td class="px-4 py-2 font-medium border-b border-gray-300">
+              訂購人
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border-b border-gray-300">
+              <%= @order.billing_name %> - <%= @order.billing_address %>
+            </td>
+          </tr>
+
+          <tr class="bg-gray-100">
+            <td class="px-4 py-2 font-medium border-b border-gray-300">
+              收件人
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">
+              <%= @order.shipping_name %> - <%= @order.shipping_address %>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
