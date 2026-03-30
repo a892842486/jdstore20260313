@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
         )
       end
 
-      redirect_to order_path(@order.token)
+      redirect_to order_path(@order)
     else
       render 'carts/checkout', status: :unprocessable_entity
     end
