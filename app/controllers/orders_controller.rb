@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
           product_name: cart_item.product.title,
           product_price: cart_item.product.price,
           quantity: cart_item.quantity
+          product_image: url_for(product.image)
         )
       end
 
@@ -21,7 +22,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find_by!(token: params[:id])
+    @order = current_user.orders.find_by!(token: params[:id])
     @product_lists = @order.product_lists
   end
 

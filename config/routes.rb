@@ -35,5 +35,9 @@ Rails.application.routes.draw do
   resources :cart_items
   resources :orders
 
+  namespace :account do
+    resources :orders, only: [:index, :show]
+  end
+
 
 end

@@ -10,4 +10,9 @@ class Order < ApplicationRecord
   def to_param
     token
   end
+
+  def total_price
+    product_lists.sum { |item| item.price * item.quantity }
+  end
+
 end
