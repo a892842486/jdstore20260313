@@ -1,0 +1,64 @@
+<div style="max-width: 640px; margin: 0 auto; font-family: Arial, sans-serif; color: #111827;">
+
+  <!-- Header -->
+  <div style="padding: 24px 0;">
+    <h2 style="font-size: 20px; font-weight: 700;">
+      訂單明細
+    </h2>
+
+    <a href="<%= account_order_url(@order.token) %>"
+       style="color: #2563eb; text-decoration: underline;">
+      查看訂單
+    </a>
+  </div>
+
+  <!-- Table -->
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb; table-layout: fixed;">
+    <thead>
+      <tr style="background: #f9fafb;">
+        <th style="text-align: left; padding: 12px; border-bottom: 1px solid #e5e7eb; width: 40%;">商品</th>
+        <th style="text-align: right; padding: 12px; border-bottom: 1px solid #e5e7eb; width: 20%;">單價</th>
+        <th style="text-align: right; padding: 12px; border-bottom: 1px solid #e5e7eb; width: 20%;">數量</th>
+        <th style="text-align: right; padding: 12px; border-bottom: 1px solid #e5e7eb; width: 20%;">小計</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @product_lists.each do |item| %>
+        <tr>
+          <td style="text-align: left; padding: 12px; border-bottom: 1px solid #f3f4f6;">
+            <%= item.product_name %>
+          </td>
+          <td style="text-align: right; padding: 12px;">
+            <%= item.product_price %>
+          </td>
+          <td style="text-align: right; padding: 12px;">
+            <%= item.quantity %>
+          </td>
+          <td style="text-align: right; padding: 12px;">
+            <%= item.quantity * item.product_price %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <!-- Total -->
+  <div style="text-align: right; margin-top: 16px; font-size: 16px; font-weight: bold;">
+    總計：<%= @order.total %> 元
+  </div>
+
+  <hr style="margin: 24px 0; border: none; border-top: 1px solid #e5e7eb;" />
+
+  <!-- Shipping -->
+  <h3 style="font-size: 18px; font-weight: 700;">寄送資訊</h3>
+
+  <div style="margin-top: 8px;">
+    <p>訂購人：<%= @order.billing_name %></p>
+    <p>地址：<%= @order.billing_address %></p>
+
+    <p style="margin-top: 12px;">收件者：<%= @order.shipping_name %></p>
+    <p>地址：<%= @order.shipping_address %></p>
+  </div>
+
+</div>
