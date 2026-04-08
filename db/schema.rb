@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_31_082151) do
+ActiveRecord::Schema[8.1].define(version: 2026_04_08_031345) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
@@ -55,9 +55,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_31_082151) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "aasm_state", default: "order_placed", null: false
     t.string "billing_address", null: false
     t.string "billing_name", null: false
     t.datetime "created_at", null: false
+    t.boolean "is_paid", default: false
     t.string "shipping_address", null: false
     t.string "shipping_name", null: false
     t.string "status"
@@ -65,6 +67,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_31_082151) do
     t.integer "total", default: 0, null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
+    t.index ["aasm_state"], name: "index_orders_on_aasm_state"
     t.index ["token"], name: "index_orders_on_token", unique: true
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

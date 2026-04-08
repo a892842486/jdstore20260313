@@ -36,8 +36,14 @@ Rails.application.routes.draw do
   resources :orders
 
   namespace :account do
-    resources :orders, only: [:index, :show]
+    resources :orders, only: [:index, :show] do
+      member do
+        post :pay_with_creditcard
+        post :pay_with_ewallet
+      end
+    end
   end
+
 
 
 end
