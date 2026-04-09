@@ -60,6 +60,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_04_08_031345) do
     t.string "billing_name", null: false
     t.datetime "created_at", null: false
     t.boolean "is_paid", default: false
+    t.string "payment_method"
     t.string "shipping_address", null: false
     t.string "shipping_name", null: false
     t.string "status"

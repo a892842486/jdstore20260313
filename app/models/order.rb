@@ -58,6 +58,4 @@ class Order < ApplicationRecord
   def pay!
     update!(is_paid: true)
   end
-
-
 end

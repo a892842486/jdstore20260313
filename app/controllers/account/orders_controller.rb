@@ -23,7 +23,7 @@ class Account::OrdersController < ApplicationController
   private
 
   def process_payment(method, message)
-    @order = current_user.orders.find(params[:id])
+    @order = current_user.orders.find_by!(token: params[:id])
 
     if @order.is_paid?
       redirect_to account_order_path(@order), alert: "此訂單已付款"
@@ -35,4 +35,5 @@ class Account::OrdersController < ApplicationController
 
     redirect_to account_order_path(@order), notice: message
   end
+
 end
