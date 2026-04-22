@@ -41,17 +41,19 @@ Rails.application.routes.draw do
   end
 
   resources :cart_items
-  resources :orders
+  resources :orders do
+    member do
+      post :apply_to_cancel
+    end
+  end
 
   namespace :account do
     resources :orders, only: [:index, :show] do
       member do
         post :pay_with_creditcard
         post :pay_with_ewallet
+        post :apply_to_cancel
       end
     end
   end
-
-
-
 end

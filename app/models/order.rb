@@ -12,7 +12,7 @@ class Order < ApplicationRecord
   end
 
   def total_price
-    product_lists.sum { |item| item.price * item.quantity }
+    product_lists.sum { |item| item.product_price.to_i * item.quantity }
   end
 
   include AASM
