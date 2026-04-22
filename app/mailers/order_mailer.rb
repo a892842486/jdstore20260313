@@ -12,7 +12,7 @@ class OrderMailer < ApplicationMailer
     setup_order(order)
 
     mail(
-      to: Rails.application.credentials.admin_email,
+      to: "jdstore@gmail.com",
       subject: "[JDStore] 用戶 #{@user.email} 申請取消訂單 #{@order.token}"
     )
   end
