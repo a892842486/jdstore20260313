@@ -18,5 +18,31 @@ zh-TW:
       edit: "編輯"
       delete: "刪除"
       confirm_delete: "確定要刪除這個商品嗎？此操作無法復原！"
+
+    orders:
+      # index
+      index_title: "訂單列表"
+      created_at: "建立時間"
+      customer: "訂購者"
+      status: "狀態"
+      actions: "操作"
+
+      # show
+      order: "訂單"
+      info: "訂單資訊"
+      customer_info: "顧客資訊"
+      mark_as_paid: "標記已付款"
+
+      # actions
+      ship: "出貨"
+      deliver: "完成配送"
+      cancel: "取消"
+      cancel_order: "取消訂單"
+      confirm_cancel: "確定要取消嗎？"
+
   currency:
     unit: "元"
+
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M"

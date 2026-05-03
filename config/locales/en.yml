@@ -18,5 +18,31 @@ en:
       edit: "Edit"
       delete: "Delete"
       confirm_delete: "Are you sure you want to delete this product?"
+
+    orders:
+      # index
+      index_title: "Orders"
+      created_at: "Created at"
+      customer: "Customer"
+      status: "Status"
+      actions: "Actions"
+
+      # show
+      order: "Order"
+      info: "Order Information"
+      customer_info: "Customer Information"
+      mark_as_paid: "Mark as Paid"
+
+      # actions
+      ship: "Ship"
+      deliver: "Mark as Delivered"
+      cancel: "Cancel"
+      cancel_order: "Cancel Order"
+      confirm_cancel: "Are you sure you want to cancel this order?"
+
   currency:
     unit: ""
+
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M"
