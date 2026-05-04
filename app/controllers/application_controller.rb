@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   stale_when_importmap_changes
 
   helper_method :current_cart
+  before_action :set_locale
 
   def current_cart
     @current_cart ||= begin
@@ -21,5 +22,19 @@ class ApplicationController < ActionController::Base
     unless current_user&.admin?
       redirect_to root_path, alert: "You are not authorized."
     end
+  end
+
+  private
+
+  def set_locale
+    if params[:locale].present? && I18n.available_locales.include?(params[:locale].to_sym)
+      I18n.locale = params[:locale]
+    else
+      I18n.locale = I18n.default_locale
+    end
+  end
+
+  def default_url_options
+    { locale: I18n.locale }
   end
 end
