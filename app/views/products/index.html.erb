@@ -17,7 +17,7 @@
 
       <div class="p-4 text-center">
         <p class="font-semibold text-gray-800 truncate"><%= product.title %></p>
-        <p class="text-blue-600 font-bold mt-1"><%= product.price %> 元</p>
+        <p class="text-blue-600 font-bold mt-1"><%= product.price %> <%= t("currency.unit") %></p>
       </div>
     </div>
   <% end %>

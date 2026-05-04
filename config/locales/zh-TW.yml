@@ -1,14 +1,14 @@
 zh-TW:
   navbar:
-    brand: "任天堂amiibo專賣（Demo）"
+    brand: "任天堂 amiibo 專賣（Demo）"
     chinese: "中文"
     english: "EN"
     cart: "購物車"
     register: "註冊"
     login: "登入"
     products: "商品"
-    admin_products: "商品管理"
-    order_history: "個人訂單歷史"
+    admin_products: "後台商品"
+    order_history: "訂單歷史"
     logout: "登出"
 
   admin:
@@ -18,6 +18,9 @@ zh-TW:
       edit: "編輯"
       delete: "刪除"
       confirm_delete: "確定要刪除這個商品嗎？此操作無法復原！"
+      create: "建立商品"
+      update: "更新商品"
+      image: "商品圖片"
 
     orders:
       # index
@@ -43,6 +46,23 @@ zh-TW:
   currency:
     unit: "元"
 
+  common:
+    submitting: "提交中..."
+
   time:
     formats:
       long: "%Y-%m-%d %H:%M"
+
+  activerecord:
+    attributes:
+      product:
+        title: "商品名稱"
+        description: "商品描述"
+        quantity: "庫存"
+        price: "價格"
+        image: "商品圖片"
+
+  products:
+    quantity: "數量"
+    add_to_cart: "加入購物車"
+    sold_out: "已銷售一空，無法購買"
