@@ -115,3 +115,15 @@ en:
 
       apply_cancel: "Request Cancellation"
       confirm_apply_cancel: "Are you sure you want to cancel this order?"
+
+  orders:
+    detail:
+      title: "Order Details"
+      product_name: "Product Name"
+      unit_price: "Unit Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      total: "Total"
+      shipping_info: "Shipping Information"
+      billing_user: "Billing Recipient"
+      shipping_user: "Shipping Recipient"
