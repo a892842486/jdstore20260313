@@ -13,7 +13,7 @@ en:
 
   admin:
     products:
-      title: "Product Management"
+      index_title: "Product Management"
       new: "+ New Product"
       edit: "Edit"
       delete: "Delete"
@@ -24,7 +24,7 @@ en:
 
     orders:
       # index
-      index_title: "Order List"
+      index_title: "Order Management"
       created_at: "Created At"
       customer: "Customer"
       status: "Status"
@@ -42,6 +42,11 @@ en:
       cancel: "Cancel"
       cancel_order: "Cancel Order"
       confirm_cancel: "Are you sure you want to cancel this order?"
+
+    site_title: "Admin Panel"
+    sidebar:
+      products: "Products"
+      orders: "Orders"
 
   currency:
     unit: "TWD"
@@ -66,3 +71,6 @@ en:
     quantity: "Quantity"
     add_to_cart: "Add to Cart"
     sold_out: "Sold out"
+
+  site:
+    title: "Nintendo amiibo Store (Demo)"

@@ -13,7 +13,7 @@ zh-TW:
 
   admin:
     products:
-      title: "商品管理"
+      index_title: "商品管理"
       new: "＋ 新增商品"
       edit: "編輯"
       delete: "刪除"
@@ -24,7 +24,7 @@ zh-TW:
 
     orders:
       # index
-      index_title: "訂單列表"
+      index_title: "訂單管理"
       created_at: "建立時間"
       customer: "訂購者"
       status: "狀態"
@@ -42,6 +42,11 @@ zh-TW:
       cancel: "取消"
       cancel_order: "取消訂單"
       confirm_cancel: "確定要取消嗎？"
+
+    site_title: "後台管理"
+    sidebar:
+      products: "商品"
+      orders: "訂單"
 
   currency:
     unit: "元"
@@ -66,3 +71,6 @@ zh-TW:
     quantity: "數量"
     add_to_cart: "加入購物車"
     sold_out: "已銷售一空，無法購買"
+
+  site:
+    title: "任天堂 amiibo 專賣（Demo）"
