@@ -101,3 +101,17 @@ zh-TW:
 
   common:
     submitting: "送出中..."
+
+  account:
+    orders:
+      index_title: "訂單歷史"
+      order_id: "訂單編號"
+      created_at: "生成時間"
+
+      pay_with_creditcard: "信用卡付款"
+      pay_with_ewallet: "電子錢包付款"
+      confirm_payment: "確定要付款嗎？"
+      paid: "已完成付款"
+
+      apply_cancel: "申請取消訂單"
+      confirm_apply_cancel: "確定要申請取消此訂單嗎？"

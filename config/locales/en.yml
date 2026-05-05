@@ -101,3 +101,17 @@ en:
 
   common:
     submitting: "Submitting..."
+
+  account:
+    orders:
+      index_title: "Order History"
+      order_id: "Order ID"
+      created_at: "Created At"
+
+      pay_with_creditcard: "Pay with Credit Card"
+      pay_with_ewallet: "Pay with E-wallet"
+      confirm_payment: "Are you sure you want to proceed with payment?"
+      paid: "Paid"
+
+      apply_cancel: "Request Cancellation"
+      confirm_apply_cancel: "Are you sure you want to cancel this order?"
