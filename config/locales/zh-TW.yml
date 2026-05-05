@@ -74,3 +74,30 @@ zh-TW:
 
   site:
     title: "任天堂 amiibo 專賣（Demo）"
+
+  carts:
+    title: "購物車"
+    clear: "清空購物車"
+    confirm_clear: "你確定要清空整個購物車嗎？"
+    product_info: "商品資訊"
+    unit_price: "單價"
+    quantity: "數量"
+    actions: "操作"
+    confirm_delete: "你確定要刪除嗎？"
+    total: "總計"
+    checkout: "確認結帳"
+
+  checkout:
+    title: "結帳"
+    product_name: "商品名稱"
+    unit_price: "單價"
+    quantity: "數量"
+    total: "總計"
+    billing_info: "訂購人資訊"
+    shipping_info: "收貨人資訊"
+    name: "姓名"
+    address: "地址"
+    create_order: "生成訂單"
+
+  common:
+    submitting: "送出中..."

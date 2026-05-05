@@ -74,3 +74,30 @@ en:
 
   site:
     title: "Nintendo amiibo Store (Demo)"
+
+  carts:
+    title: "Cart"
+    clear: "Clear Cart"
+    confirm_clear: "Are you sure you want to clear the entire cart?"
+    product_info: "Product Information"
+    unit_price: "Unit Price"
+    quantity: "Quantity"
+    actions: "Actions"
+    confirm_delete: "Are you sure you want to remove this item?"
+    total: "Total"
+    checkout: "Checkout"
+
+  checkout:
+    title: "Checkout"
+    product_name: "Product Name"
+    unit_price: "Unit Price"
+    quantity: "Quantity"
+    total: "Total"
+    billing_info: "Billing Information"
+    shipping_info: "Shipping Information"
+    name: "Name"
+    address: "Address"
+    create_order: "Place Order"
+
+  common:
+    submitting: "Submitting..."
