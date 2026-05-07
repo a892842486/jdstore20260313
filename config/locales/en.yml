@@ -67,6 +67,16 @@ en:
         price: "Price"
         image: "Product Image"
 
+      order:
+        billing_name: "Billing Name"
+        billing_address: "Billing Address"
+        shipping_name: "Shipping Name"
+        shipping_address: "Shipping Address"
+
+  errors:
+    messages:
+      blank: "can't be blank"
+
   products:
     quantity: "Quantity"
     add_to_cart: "Add to Cart"

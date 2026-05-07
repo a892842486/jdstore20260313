@@ -67,6 +67,16 @@ zh-TW:
         price: "價格"
         image: "商品圖片"
 
+      order:
+        billing_name: "訂購人姓名"
+        billing_address: "訂購人地址"
+        shipping_name: "收件人姓名"
+        shipping_address: "收件人地址"
+
+  errors:
+    messages:
+      blank: "不能為空白"
+
   products:
     quantity: "數量"
     add_to_cart: "加入購物車"
