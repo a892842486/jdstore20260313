@@ -28,10 +28,10 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     if params[:locale].present? && I18n.available_locales.include?(params[:locale].to_sym)
-      I18n.locale = params[:locale]
-    else
-      I18n.locale = I18n.default_locale
+      session[:locale] = params[:locale]
     end
+
+    I18n.locale = session[:locale]&.to_sym || I18n.default_locale
   end
 
   def default_url_options
