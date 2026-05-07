@@ -5,7 +5,7 @@ class CartItemsController < ApplicationController
     @cart_item = @cart.cart_items.find(params[:id])
     @product = @cart_item.product
     @cart_item.destroy
-    flash[:warning] = "成功將 #{@product.title} 從購物車刪除！"
+    flash[:warning] = t("flash.cart_items.removed", product: @product.title)
     redirect_back fallback_location: carts_path
   end
 
