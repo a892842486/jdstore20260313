@@ -127,3 +127,33 @@ zh-TW:
       shipping_info: "寄送資訊"
       billing_user: "訂購人"
       shipping_user: "收件人"
+
+  order_mailer:
+    detail:
+      title: "訂單明細"
+      order_link: "訂單連結"
+      view_order: "查看訂單"
+      product_name: "商品名稱"
+      unit_price: "單價"
+      quantity: "數量"
+      subtotal: "小計"
+      total: "總計"
+      shipping_info: "寄送資訊"
+      billing_user: "訂購人"
+      shipping_user: "收件人"
+
+    greeting:
+      admin: "您好，管理員"
+      user: "您好，%{email}"
+
+    apply_cancel:
+      message_html: "使用者 <strong>%{user_email}</strong> 申請取消訂單 <strong>%{order_token}</strong>。"
+
+    notify_cancel:
+      message_html: "您的訂單 <strong>%{order_token}</strong> 已取消。"
+
+    notify_ship:
+      message_html: "您的訂單 <strong>%{order_token}</strong> 已出貨。"
+
+    notify_order_placed:
+      message_html: "您的訂單 <strong>%{order_token}</strong> 已成立。"

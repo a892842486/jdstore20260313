@@ -127,3 +127,33 @@ en:
       shipping_info: "Shipping Information"
       billing_user: "Billing Recipient"
       shipping_user: "Shipping Recipient"
+
+  order_mailer:
+    detail:
+      title: "Order Details"
+      order_link: "Order Link"
+      view_order: "View Order"
+      product_name: "Product Name"
+      unit_price: "Unit Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      total: "Total"
+      shipping_info: "Shipping Information"
+      billing_user: "Billing Recipient"
+      shipping_user: "Shipping Recipient"
+
+    greeting:
+      admin: "Hello, Admin"
+      user: "Hello, %{email}"
+
+    apply_cancel:
+      message_html: "User <strong>%{user_email}</strong> has requested to cancel order <strong>%{order_token}</strong>."
+
+    notify_cancel:
+      message_html: "Your order <strong>%{order_token}</strong> has been cancelled."
+
+    notify_ship:
+      message_html: "Your order <strong>%{order_token}</strong> has been shipped."
+
+    notify_order_placed:
+      message_html: "Your order <strong>%{order_token}</strong> has been placed."
