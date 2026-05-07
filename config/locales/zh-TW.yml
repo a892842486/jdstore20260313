@@ -157,3 +157,21 @@ zh-TW:
 
     notify_order_placed:
       message_html: "您的訂單 <strong>%{order_token}</strong> 已成立。"
+
+  flash:
+    account:
+      orders:
+        paid_with_creditcard: "使用信用卡完成付款"
+        paid_with_ewallet: "使用電子錢包完成付款"
+        already_paid: "此訂單已付款"
+        cancel_requested: "已提交取消申請"
+
+    admin:
+      orders:
+        shipped: "訂單已出貨，通知信已寄出"
+        cancelled: "訂單已取消，通知信已寄出"
+
+      products:
+        created: "商品已建立"
+        updated: "商品已更新"
+        deleted: "商品已刪除"

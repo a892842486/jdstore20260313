@@ -157,3 +157,21 @@ en:
 
     notify_order_placed:
       message_html: "Your order <strong>%{order_token}</strong> has been placed."
+
+  flash:
+    account:
+      orders:
+        paid_with_creditcard: "Payment completed by credit card."
+        paid_with_ewallet: "Payment completed by e-wallet."
+        already_paid: "This order has already been paid."
+        cancel_requested: "Cancellation request has been submitted."
+
+    admin:
+      orders:
+        shipped: "Order has been shipped and the notification email has been sent."
+        cancelled: "Order has been cancelled and the notification email has been sent."
+
+      products:
+        created: "Product was created successfully."
+        updated: "Product was updated successfully."
+        deleted: "Product was deleted successfully."
