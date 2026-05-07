@@ -158,6 +158,12 @@ en:
     notify_order_placed:
       message_html: "Your order <strong>%{order_token}</strong> has been placed."
 
+    subject:
+      order_placed: "[JDStore] Order Confirmation - %{token}"
+      apply_cancel: "[JDStore] User %{email} requested cancellation for order %{token}"
+      shipped: "[JDStore] Your order %{token} has been shipped"
+      cancelled: "[JDStore] Your order %{token} has been cancelled"
+
   flash:
     account:
       orders:
@@ -175,3 +181,22 @@ en:
         created: "Product was created successfully."
         updated: "Product was updated successfully."
         deleted: "Product was deleted successfully."
+
+    auth:
+      not_authorized: "You are not authorized."
+
+    cart_items:
+      removed: "%{product} was removed from the cart."
+
+    carts:
+      cleared: "Cart has been cleared."
+
+    orders:
+      created: "Order has been placed and the confirmation email has been sent."
+
+    products:
+      quantity_increased: "Increased quantity for %{product}."
+      added_to_cart: "%{product} has been added to the cart."
+
+    welcome:
+      greeting: "Good morning! Hello!"

@@ -158,6 +158,12 @@ zh-TW:
     notify_order_placed:
       message_html: "您的訂單 <strong>%{order_token}</strong> 已成立。"
 
+    subject:
+      order_placed: "[JDStore] 訂單成立通知 - %{token}"
+      apply_cancel: "[JDStore] 用戶 %{email} 申請取消訂單 %{token}"
+      shipped: "[JDStore] 您的訂單 %{token} 已出貨"
+      cancelled: "[JDStore] 您的訂單 %{token} 已取消"
+
   flash:
     account:
       orders:
@@ -175,3 +181,22 @@ zh-TW:
         created: "商品已建立"
         updated: "商品已更新"
         deleted: "商品已刪除"
+
+    auth:
+      not_authorized: "您沒有權限執行此操作"
+
+    cart_items:
+      removed: "成功將 %{product} 從購物車刪除！"
+
+    carts:
+      cleared: "已清空購物車"
+
+    orders:
+      created: "訂單已成立，確認信已寄出！"
+
+    products:
+      quantity_increased: "已增加 %{product} 的數量"
+      added_to_cart: "已加入 %{product} 到購物車"
+
+    welcome:
+      greeting: "早安！你好！"
