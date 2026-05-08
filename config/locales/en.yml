@@ -82,6 +82,11 @@ en:
     add_to_cart: "Add to Cart"
     sold_out: "Sold out"
 
+    hero:
+      title: "Explore Nintendo Game Worlds with amiibo"
+      subtitle: "Connect amiibo with your console and enjoy more interactive gameplay."
+      badge: "Rails 8 Ecommerce Demo Project"
+
   site:
     title: "Nintendo amiibo Store (Demo)"
 

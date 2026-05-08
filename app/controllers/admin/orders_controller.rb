@@ -2,7 +2,7 @@ class Admin::OrdersController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
   before_action :admin_required
-  before_action :set_order, only: [:show, :ship, :shipped, :cancel, :return]
+  before_action :set_order, only: [ :show, :ship, :shipped, :cancel, :return ]
 
   def index
     @orders = Order.order(id: :desc)

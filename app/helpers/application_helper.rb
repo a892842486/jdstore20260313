@@ -19,7 +19,7 @@ module ApplicationHelper
         )
       end
 
-      safe_join([label, input, error].compact)
+      safe_join([ label, input, error ].compact)
     end
   end
 end

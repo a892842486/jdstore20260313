@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :show]
+  before_action :authenticate_user!, only: [ :create, :show ]
 
   def create
     @order = current_user.orders.build(order_params)
@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
       end
     end
 
-    render 'carts/checkout', status: :unprocessable_entity
+    render "carts/checkout", status: :unprocessable_entity
   end
 
   def show

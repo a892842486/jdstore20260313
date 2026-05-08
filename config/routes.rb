@@ -13,15 +13,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  root 'products#index'
+  root "products#index"
 
-  resources :products, only: [:index, :show] do
+  resources :products, only: [ :index, :show ] do
     member do
       post :add_to_cart
     end
   end
 
-  resources :carts, only: [:index] do
+  resources :carts, only: [ :index ] do
     collection do
       delete :clean
       get :checkout
@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    resources :orders, only: [:index, :show] do
+    resources :orders, only: [ :index, :show ] do
       member do
         post :pay_with_creditcard
         post :pay_with_ewallet
