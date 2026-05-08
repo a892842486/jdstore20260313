@@ -41,5 +41,4 @@ class Account::OrdersController < ApplicationController
 
     redirect_to account_order_path(@order), notice: message
   end
-
 end
