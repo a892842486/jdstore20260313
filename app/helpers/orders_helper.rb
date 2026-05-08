@@ -34,4 +34,8 @@ module OrdersHelper
       "#{base} bg-gray-100"
     end
   end
+
+  def order_state_text(order)
+    t("aasm.order.#{order.aasm_state}")
+  end
 end

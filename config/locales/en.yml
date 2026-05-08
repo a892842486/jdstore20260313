@@ -210,3 +210,12 @@ en:
 
     welcome:
       greeting: "Good morning! Hello!"
+
+  aasm:
+    order:
+      order_placed: "Order Placed"
+      paid: "Paid"
+      shipping: "Shipping"
+      shipped: "Delivered"
+      order_cancelled: "Cancelled"
+      good_returned: "Returned"

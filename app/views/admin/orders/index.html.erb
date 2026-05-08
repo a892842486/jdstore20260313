@@ -34,7 +34,7 @@
           <!-- 狀態 -->
           <td class="px-6 py-4">
             <span class="<%= order_state_badge(order) %>">
-              <%= order.aasm_state.humanize %>
+              <%= order_state_text(order) %>
             </span>
           </td>
 

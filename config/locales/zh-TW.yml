@@ -210,3 +210,12 @@ zh-TW:
 
     welcome:
       greeting: "早安！你好！"
+
+  aasm:
+    order:
+      order_placed: "訂單成立"
+      paid: "已付款"
+      shipping: "配送中"
+      shipped: "已送達"
+      order_cancelled: "已取消"
+      good_returned: "已退貨"
