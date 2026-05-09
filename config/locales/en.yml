@@ -1,4 +1,7 @@
 en:
+  site:
+    title: "Nintendo amiibo Store (Demo)"
+
   navbar:
     brand: "Nintendo amiibo Store (Demo)"
     chinese: "中文"
@@ -11,84 +14,15 @@ en:
     order_history: "Order History"
     logout: "Log Out"
 
-  admin:
-    products:
-      index_title: "Product Management"
-      new: "+ New Product"
-      edit: "Edit"
-      delete: "Delete"
-      confirm_delete: "Are you sure you want to delete this product? This action cannot be undone."
-      create: "Create Product"
-      update: "Update Product"
-      image: "Product Image"
-
-    orders:
-      # index
-      index_title: "Order Management"
-      created_at: "Created At"
-      customer: "Customer"
-      status: "Status"
-      actions: "Actions"
-
-      # show
-      order: "Order"
-      info: "Order Information"
-      customer_info: "Customer Information"
-      mark_as_paid: "Mark as Paid"
-
-      # actions
-      ship: "Ship"
-      deliver: "Mark as Delivered"
-      cancel: "Cancel"
-      cancel_order: "Cancel Order"
-      confirm_cancel: "Are you sure you want to cancel this order?"
-
-    site_title: "Admin Panel"
-    sidebar:
-      products: "Products"
-      orders: "Orders"
-
-  currency:
-    unit: "TWD"
-
-  common:
-    submitting: "Submitting..."
-
-  time:
-    formats:
-      long: "%Y-%m-%d %H:%M"
-
-  activerecord:
-    attributes:
-      product:
-        title: "Title"
-        description: "Description"
-        quantity: "Quantity"
-        price: "Price"
-        image: "Product Image"
-
-      order:
-        billing_name: "Billing Name"
-        billing_address: "Billing Address"
-        shipping_name: "Shipping Name"
-        shipping_address: "Shipping Address"
-
-  errors:
-    messages:
-      blank: "can't be blank"
-
   products:
     quantity: "Quantity"
     add_to_cart: "Add to Cart"
     sold_out: "Sold out"
 
     hero:
-      title: "Explore Nintendo Game Worlds with amiibo"
-      subtitle: "Connect amiibo with your console and enjoy more interactive gameplay."
-      badge: "Rails 8 Ecommerce Demo Project"
-
-  site:
-    title: "Nintendo amiibo Store (Demo)"
+      title: "Explore the World of Nintendo Games with amiibo"
+      subtitle: "Connect amiibo with your console and unlock more interactive gameplay experiences"
+      badge: "Rails 8 E-commerce Portfolio Project"
 
   carts:
     title: "Cart"
@@ -119,12 +53,10 @@ en:
       index_title: "Order History"
       order_id: "Order ID"
       created_at: "Created At"
-
       pay_with_creditcard: "Pay with Credit Card"
       pay_with_ewallet: "Pay with E-wallet"
       confirm_payment: "Are you sure you want to proceed with payment?"
       paid: "Paid"
-
       apply_cancel: "Request Cancellation"
       confirm_apply_cancel: "Are you sure you want to cancel this order?"
 
@@ -139,6 +71,39 @@ en:
       shipping_info: "Shipping Information"
       billing_user: "Billing Recipient"
       shipping_user: "Shipping Recipient"
+
+  admin:
+    products:
+      index_title: "Product Management"
+      new: "+ New Product"
+      edit: "Edit"
+      delete: "Delete"
+      confirm_delete: "Are you sure you want to delete this product? This action cannot be undone."
+      create: "Create Product"
+      update: "Update Product"
+      image: "Product Image"
+
+    orders:
+      index_title: "Order Management"
+      created_at: "Created At"
+      customer: "Customer"
+      status: "Status"
+      actions: "Actions"
+      order: "Order"
+      info: "Order Information"
+      customer_info: "Customer Information"
+      mark_as_paid: "Mark as Paid"
+      ship: "Ship"
+      deliver: "Mark as Delivered"
+      cancel: "Cancel"
+      cancel_order: "Cancel Order"
+      confirm_cancel: "Are you sure you want to cancel this order?"
+
+    site_title: "Admin Panel"
+
+    sidebar:
+      products: "Products"
+      orders: "Orders"
 
   order_mailer:
     detail:
@@ -221,3 +186,32 @@ en:
       shipped: "Delivered"
       order_cancelled: "Cancelled"
       good_returned: "Returned"
+
+  activerecord:
+    attributes:
+      product:
+        title: "Title"
+        description: "Description"
+        quantity: "Quantity"
+        price: "Price"
+        image: "Product Image"
+
+      order:
+        billing_name: "Billing Name"
+        billing_address: "Billing Address"
+        shipping_name: "Shipping Name"
+        shipping_address: "Shipping Address"
+
+  errors:
+    messages:
+      blank: "can't be blank"
+
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M"
+
+  currency:
+    unit: "TWD"
+
+  common:
+    submitting: "Submitting..."
