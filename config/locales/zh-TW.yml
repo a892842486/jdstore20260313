@@ -51,9 +51,6 @@ zh-TW:
   currency:
     unit: "元"
 
-  common:
-    submitting: "提交中..."
-
   time:
     formats:
       long: "%Y-%m-%d %H:%M"

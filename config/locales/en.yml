@@ -114,9 +114,6 @@ en:
     address: "Address"
     create_order: "Place Order"
 
-  common:
-    submitting: "Submitting..."
-
   account:
     orders:
       index_title: "Order History"
